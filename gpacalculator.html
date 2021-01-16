@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+          background-color: lightblue;
+        }
+        </style>
+        
+    </head>
+
+    <head>
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial;
+          padding: 10px;
+          background: #f1f1f1;
+        }
+        
+        /* Header/Blog Title */
+        .header {
+          padding: 30px;
+          text-align: center;
+          background: white;
+        }
+        
+        .header h1 {
+          font-size: 50px;
+        }
+        
+        /* Style the top navigation bar */
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        /* Style the topnav links */
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        /* Change color on hover */
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {   
+          float: left;
+          width: 75%;
+        }
+        
+        /* Right column */
+        .rightcolumn {
+          float: left;
+          width: 25%;
+          background-color: #f1f1f1;
+          padding-left: 20px;
+        }
+        
+        /* Fake image */
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          padding: 20px;
+        }
+        
+        /* Add a card effect for articles */
+        .card {
+          background-color: white;
+          padding: 20px;
+          margin-top: 20px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Footer */
+        .footer {
+          padding: 20px;
+          text-align: center;
+          background: #ddd;
+          margin-top: 20px;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+          .leftcolumn, .rightcolumn {   
+            width: 100%;
+            padding: 0;
+          }
+        }
+        
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+          .topnav a {
+            float: none;
+            width: 100%;
+          }
+        }
+        </style>
+      </head>
+
+    <body>
+        <div class="header">
+            <h1>Gpa calculator</h1>
+            <p>หน้าคำนวณGPA</p>
+          </div>
+        
+          <div class="topnav">
+            <a href="Home.html">Home</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Contact.html">Contact</a>
+            <a href="gpacalculator.html">Gpa calculator</a>
+            <a href="#" style="float:right">nothing yet</a>
+          </div>
+        <head>
+            <title>Gpa calculator</title>
+        </head>
+        <head>
+            <style>
+                h1{
+                    text-align: center;
+                }
+                h2{
+                    text-align: center;
+                }
+            </style>   
+        </head>
+
+        <h2>
+          <p>ข้อมูลวิชาเรียน</p>
+        </h2>
+
+
+        
+        <form>
+            <table style="font-size: 21px;" align="center">
+                <tr>
+                    <td>
+                        <input type="text" class="text" placeholder="ID ex 261xxx , 001101" id="subID">
+                        <select name="semester" class="text" id="semester">
+                            <option value="1-2562">1/2562</option>
+                            <option value="2-2562">2/2562</option>
+                            <option value="1-2563">1/2563</option>
+                            <option value="2-2563">2/2563</option>
+                            <option value="1-2564">1/2564</option>
+                            <option value="2-2564">2/2564</option>
+                            <option value="1-2565">1/2565</option>
+                            <option value="2-2565">2/2565</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="text" placeholder="weigth ex 3 , 1.5" id="weight">
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <select name="gpa" class="text" id="gpa">
+                            <option value="4" >A
+                            <option value="3.5" >B+
+                            <option value="3" >B
+                            <option value="2.5" >C+
+                            <option value="2" >C
+                            <option value="1.5" >D+
+                            <option value="1" >D
+                            <option value="0" >F
+                        </select>
+                        
+                    </td>
+                    <td>
+                        <input type="submit" name="Add"></button>
+                    </td>
+                </tr>
+                
+                <tr> 
+                    <table class="t1"  align="center">
+                       <tr><td><th>1/2562</th></td></tr>
+                        <tbody id = "1-2562">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td>GPA : </td>
+                            <td background-color="" rgb(253, 215, 133);><p id = "gpa1-2562">0.00</p></td>
+                            <td><p id = "w1-2562">0</p></td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <table class="t2"  align="center">
+                        <tr><td><th>2/2562</th></td></tr>
+                        <tbody id = "2-2562">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td>GPA : </td>
+                            <td><p id = "gpa2-2562">0.00</p></td>
+                            <td><p id = "w2-2562">0</p></td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <table class="t1"  align="center">
+                        <tr><td><th>1/2563</th></td></tr>
+                        <tbody  id = "1-2563">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td>GPA : </td>
+                            <td><p id = "gpa1-2563">0.00</p></td>
+                            <td><p id = "w1-2563">0</p></td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <table class="t2" align="center">
+                        <tr><td><th>2/2563</th></td></tr>
+                        <tbody id = "2-2563">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td>GPA : </td>
+                            <td><p id = "gpa2-2563">0.00</p></td>
+                            <td><p id = "w2-2563">0</p></td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <table  class="t1"  align="center">
+                        <tr><td><th>1/2564</th></td></tr>
+                        <tbody id = "1-2564">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td>GPA : </td>
+                            <td><p id= "gpa1-2564">0.00</p></t d>
+                            <td><p id= "w1-2564">0</p></t d>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <table class="t2" align="center">
+                        <tr><td></td><th>2/2564</th></tr>
+                        <tbody  id = "2-2564">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td>GPA : </td>
+                            <td><p id = "gpa2-2564">0.00</p></td>
+                            <td><p id = "w2-2564">0</p></td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <table class="t1"  align="center">
+                        <tr><td><th>1/2565</th></td></tr>
+                        <tbody id = "1-2565">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr >
+                            <td>GPA : </td>
+                            <td><p id = "gpa1-2565"> 0.00</p></td>
+                            <td><p id = "w1-2565">0</p></td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+                    <table class="t2"  align="center">
+                        <tr><td><th>2/2565</th></td></tr>
+                        <tbody id = "2-2565">
+                            <tr>
+                                <td>Course code</td>
+                                <td>Credit</td>
+                                <td>Grade</td>
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td>GPA : </td>
+                            <td><p id = "gpa2-2565">0.00</p></td>
+                            <td><p id = "w2-2565">0</p></td>
+                        </tr>
+                    </table>
+                </tr>
+                
+                <thead align="center">
+                    <td>GPAX : </td>
+                    <td><p id="gpax">0.00</p></td>
+                    <td><p id="wx">0</p></td>
+                </tr>
+                <tr align="center">
+                    <td>GPA(CPE) : </td>
+                    <td><p id="gpacpe">0.00</p></td>
+                    <td><p id="wcpe">0</p></td>
+                </tr>
+            
+            </table>
+        </form>      
+        
+
+        
+    </body>
+</html>
